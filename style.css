@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #091921;
+}
+.calculator{
+    position: relative;
+    display: grid;
+    min-width: 100px;
+}
+.calculator .value{
+    grid-column: span 4;
+    height: 100px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: default;
+    transition: all 0.5s ease-out;
+}
+.calculator .value.active{
+    grid-column: span 8;
+}
+.calculator span{
+    display: grid;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background: #0c2835;
+    place-items: center;
+    border: 1px solid rgba(0, 0, 0, .1);
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.container{
+    position: absolute;
+    top: 0;
+    left: 47%;
+}
+.toogle-btn{
+    width: 80px;
+    height: 40px;
+    background: gray;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.circle{
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.2s linear;
+}
+.scientific{
+    color: gray;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+.toogle-btn.active{
+    background: #00acee;
+}
+.toogle-btn.active .circle{
+    margin-left: 40px;
+}
+.toogle-btn.active ~ .scientific{
+    color: #00acee;
+}
+.calculator span:active{
+    background: #10b4a7;
+    color: #333;
+}
+.calculator span.clear{
+    background: #ff3070;
+}
+.calculator span.equal{
+    background: #0342f0;
+    grid-column-end: span 2;
+    width: 120px;
+}
+.calculator span.fct{
+    background: #006e80;
+    grid-column-end: span 2;
+    width: 120px;
+}
+.calculator span.opt{
+    background: #f03a03;
+}
+.calculator span.sci{
+    display: none;
+    text-align: center;
+    line-height: 3;
+}
+
