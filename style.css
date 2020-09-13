@@ -44,6 +44,7 @@ body{
     position: absolute;
     top: 0;
     left: 47%;
+    margin-bottom: 25px;
 }
 .toogle-btn{
     width: 80px;
@@ -99,3 +100,8 @@ body{
     line-height: 3;
 }
 
+@media (max-width: 360px){
+    .calculator{
+        margin-top: 60px;
+    }
+}
